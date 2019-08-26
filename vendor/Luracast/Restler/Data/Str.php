@@ -12,7 +12,7 @@ namespace Luracast\Restler\Data;
  * @link       http://luracast.com/products/restler/
  * @version    3.0.0rc6
  */
-class String
+class Str
 {
     /**
      * Given haystack contains the needle or not?

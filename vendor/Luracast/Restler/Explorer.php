@@ -2,7 +2,7 @@
 namespace Luracast\Restler;
 
 use stdClass;
-use Luracast\Restler\Data\String;
+use Luracast\Restler\Data\Str;
 use Luracast\Restler\Data\ValidationInfo;
 use Luracast\Restler\Scope;
 
@@ -191,7 +191,7 @@ class Explorer implements iProvideMultiVersionApi
         foreach ($map as $path => $data) {
             $route = $data[0]['route'];
             $access = $data[0]['access'];
-            if ($access && !String::contains($path, '{')) {
+            if ($access && !Str::contains($path, '{')) {
                 $r[] = array(
                     'path' => empty($path) ? '/root' : "/$path",
                     //'description' => ''
@@ -281,7 +281,7 @@ class Explorer implements iProvideMultiVersionApi
             $r->type = 'array';
         } elseif ($r->type == 'null') {
             $r->type = 'void';
-        } elseif (String::contains($r->type, '|')) {
+        } elseif (Str::contains($r->type, '|')) {
             $r->type = 'array';
         }
 
