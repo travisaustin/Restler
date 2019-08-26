@@ -10,7 +10,7 @@ use Illuminate\View\Engines\EngineResolver;
 use Illuminate\View\Factory;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\View;
-use Luracast\Restler\Data\Object;
+use Luracast\Restler\Data\Obj;
 use Luracast\Restler\Defaults;
 use Luracast\Restler\RestException;
 use Luracast\Restler\Restler;
@@ -310,7 +310,7 @@ class HtmlFormat extends DependentFormat
             $error = $success ? null : $exception->getMessage();
             $data = array(
                 'response' => static::$convertResponseToArray
-                    ? Object::toArray($data)
+                    ? Obj::toArray($data)
                     : $data,
                 'stages' => $this->restler->getEvents(),
                 'success' => $success,

@@ -52,7 +52,7 @@ class Scope
         'MemcacheCache'      => 'Luracast\Restler\MemcacheCache',
 
         //Utility classes
-        'Object'             => 'Luracast\Restler\Data\Object',
+        'Object'             => 'Luracast\Restler\Data\Obj',
         'String'             => 'Luracast\Restler\Data\String',
         'Arr'                => 'Luracast\Restler\Data\Arr',
 
